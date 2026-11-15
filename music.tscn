@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cnm4d5oimr18m"]
+
+[ext_resource type="AudioStream" uid="uid://cg2ub0b5l0u8n" path="res://assets/stranger things track.mp3" id="1_5vxup"]
+[ext_resource type="Script" uid="uid://badvv73ayppgd" path="res://music.gd" id="2_w5q55"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=455384939]
+stream = ExtResource("1_5vxup")
+volume_db = -12.0
+autoplay = true
+script = ExtResource("2_w5q55")

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bh65eu81fcm5x"]
+
+[ext_resource type="Texture2D" uid="uid://db7d0o86wmimw" path="res://assets/starting.png" id="1_ncxyx"]
+[ext_resource type="Script" uid="uid://gay6f4mwy4sp" path="res://start_screen.gd" id="1_pevhg"]
+
+[sub_resource type="SystemFont" id="SystemFont_pevhg"]
+font_names = PackedStringArray("Chalkduster")
+
+[sub_resource type="SystemFont" id="SystemFont_afy8x"]
+font_names = PackedStringArray("Chalkduster")
+
+[sub_resource type="SystemFont" id="SystemFont_ncxyx"]
+font_names = PackedStringArray("Chalkduster")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pevhg"]
+bg_color = Color(0.0627451, 0.101960786, 0.16862746, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.39607844, 0.8509804, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.2, 0.53333336, 1, 0.53333336)
+shadow_size = 8
+
+[node name="StartScreen" type="Node2D" unique_id=1849103709]
+script = ExtResource("1_pevhg")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1164291330]
+z_index = -1
+position = Vector2(256, 256)
+scale = Vector2(0.44497606, 0.45055822)
+texture = ExtResource("1_ncxyx")
+
+[node name="GameTitle" type="Label" parent="." unique_id=2030633921]
+offset_left = 157.0
+offset_top = 42.0
+offset_right = 381.0
+offset_bottom = 88.0
+theme_override_fonts/font = SubResource("SystemFont_pevhg")
+theme_override_font_sizes/font_size = 25
+text = "UPSIDE DOWN"
+
+[node name="StoryLabel" type="Label" parent="." unique_id=136289820]
+offset_left = 49.0
+offset_top = 103.0
+offset_right = 498.0
+offset_bottom = 340.0
+theme_override_fonts/font = SubResource("SystemFont_afy8x")
+theme_override_font_sizes/font_size = 16
+text = "One ordinary day, a young girl discovers
+strange glowing letters on her living room wall.
+
+A mysterious key appears, unlocking
+a portal to a dangerous world.
+
+Inside, a terrifying dragon awaits.
+
+Can she survive and find her
+way back to reality?"
+
+[node name="StartButton" type="Button" parent="." unique_id=1213200130]
+offset_left = 176.0
+offset_top = 378.0
+offset_right = 331.0
+offset_bottom = 412.0
+theme_override_fonts/font = SubResource("SystemFont_ncxyx")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pevhg")
+text = "	START GAME"
